@@ -1,0 +1,16 @@
+<div class="inner">
+  <section class="tiles" ng-controller="ControladorInicio">
+    <h3 ng-show="!loading && lugares.length==0">Cargando...</h3>
+    <article class="style1" ng-repeat="lugar in lugares">
+      <span class="image">
+        <img ng-src={{lugar.urlImagen}} alt="" />
+      </span>
+      <a href="#">
+        <h2>{{lugar.nombre}}</h2>
+        <div class="content">
+          <p>{{lugar.descripcion}}</p>
+        </div>
+      </a>
+    </article>
+  </section>
+</div>

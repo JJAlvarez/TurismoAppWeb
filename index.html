@@ -12,7 +12,10 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--angularjs library-->
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-		<script src="controller.js"></script>
+		<script src="https://code.angularjs.org/1.5.7/angular-route.min.js"></script>
+		<script src="https://code.angularjs.org/1.5.7/angular-resource.min.js"></script>
+		<script src="app.js"></script>
+		<script src="factories/webService.js"></script>
 	</head>
 	<body>
 		<!-- Wrapper -->
@@ -52,22 +55,7 @@
 					</nav>
 
 				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<section class="tiles" ng-controller="ControladorImagen">
-								<article class="style1" ng-repeat="lugar in lugares">
-									<span class="image">
-										<img src="{{lugar.urlImagen}}" alt="" />
-									</span>
-									<a href="#">
-										<h2>{{lugar.nombre}}</h2>
-										<div class="content">
-											<p>{{lugar.descripcion}}</p>
-										</div>
-									</a>
-								</article>
-							</section>
-						</div>
+					<div id="main" ng-view>
 					</div>
 
 				<!-- Footer -->
@@ -110,7 +98,6 @@
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 	</body>
 </html>
