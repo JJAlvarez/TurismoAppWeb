@@ -1,0 +1,16 @@
+<div class="inner">
+  <section class="tiles">
+    <h3 ng-show="!loading && restaurantes.length==0">Cargando...</h3>
+    <article class="style1" ng-repeat="restaurante in restaurantes">
+      <span class="image">
+        <img ng-src={{restaurante.urlImagen}} alt="" />
+      </span>
+      <a href="#/">
+        <h2>{{restaurante.nombre}}</h2>
+        <div class="content">
+          <p>{{restaurante.descripcion}}</p>
+        </div>
+      </a>
+    </article>
+  </section>
+</div>
