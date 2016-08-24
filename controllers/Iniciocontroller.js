@@ -1,7 +1,9 @@
-angular.module('App')
-.controller('ControladorInicio', ['$scope', 'LugarTuristicoService', function($scope, LugarTuristicoService){
+angular.module('turismoapp')
+.controller('ControladorInicio', ['$scope', 'ApiWebService', function($scope, ApiWebService){
   $scope.lugares = [];
   $scope.loading = true;
-  $scope.lugares = LugarTuristicoService.query();
+  ApiWebService.getLugaresTuristicos(function(response) {
+  	$scope.lugares = response;
+  });
   $scope.loading = false;
 }]);

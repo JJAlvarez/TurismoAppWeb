@@ -1,0 +1,16 @@
+<div class="inner row">
+  <section class="tiles">
+    <h3 ng-show="!loading && departamentos.length==0">Cargando...</h3>
+    <article class="style1 col-md-4" ng-repeat="departamento in departamentos">
+      <span class="image">
+        <img ng-src={{departamento.urlImagen}} alt="" height="200px" />
+      </span>
+      <a href="#/">
+        <h2>{{departamento.nombre}}</h2>
+        <div class="content">
+          <p>{{departamento.descripcion}}</p>
+        </div>
+      </a>
+    </article>
+  </section>
+</div>

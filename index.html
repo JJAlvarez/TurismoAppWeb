@@ -4,18 +4,21 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html ng-app="App">
+<html ng-app="turismoapp">
 	<head>
 		<title>Turismo Guatemala</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
 		<!--angularjs library-->
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 		<script src="https://code.angularjs.org/1.5.7/angular-route.min.js"></script>
 		<script src="https://code.angularjs.org/1.5.7/angular-resource.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controllers/Iniciocontroller.js"></script>
+		<script src="controllers/DepartamentoController.js"></script>
 		<script src="factories/webService.js"></script>
 	</head>
 	<body>
@@ -25,33 +28,25 @@
 				<!-- Header -->
 					<header id="header">
 						<div class="inner">
-
-							<!-- Logo -->
 								<a href="index.html" class="logo">
 									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Turismo Guatemala</span>
 								</a>
-
-							<!-- Nav -->
 								<nav>
 									<ul>
 										<li><a href="#menu">Menu</a></li>
 									</ul>
 								</nav>
-
 						</div>
 					</header>
 
-				<!-- Menu -->
 					<nav id="menu">
 						<h2>Menu</h2>
 						<ul>
-							<li><a href="#">Inicio</a></li>
-							<li><a href="#">Departamentos</a></li>
-							<li><a href="#">Hoteles</a></li>
-							<li><a href="#">Restaurantes</a></li>
-							<li><a href="#">Sitios Turísticos</a></li>
-							<li><a href="#">Eventos</a></li>
-							<li><a href="#">Tienda</a></li>
+							<li><a href="#/">Inicio</a></li>
+							<li><a href="#/departamentos">Departamentos</a></li>
+							<li><a href="#/">Hoteles</a></li>
+							<li><a href="#/">Restaurantes</a></li>
+							<li><a href="#/lugares">Sitios Turísticos</a></li>
 						</ul>
 					</nav>
 
@@ -90,13 +85,14 @@
 								</ul>
 							</section>
 							<ul class="copyright">
-								<li>&copy; KinalDevs. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>&copy; Hecho por Javier Alvarez. Todos los derechos reservados</li>
 							</ul>
 						</div>
 					</footer>
 			</div>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
+    		<script src="assets/js/bootstrap.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
